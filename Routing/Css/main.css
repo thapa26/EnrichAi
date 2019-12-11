@@ -1,0 +1,9 @@
+.Container{
+float: left;
+width: 100%;
+}
+.inner{
+
+    padding: 25px;
+  
+}

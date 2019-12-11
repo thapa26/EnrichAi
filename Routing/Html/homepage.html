@@ -1,0 +1,28 @@
+
+<div class="Container">
+    <div ng-controller="myCtrl">
+        <div class="form-group">
+          Number of row show
+          <input type="number" step="1" min="1" max="5" ng-model="rowlimit">
+        </div>
+        <table class="table table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Dob</th>
+              <th>Gender</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in employees | limitTo : rowlimit ">
+                <td>{{x.name | uppercase}}</td>
+                <td>{{x.Dob | date:"dd/mm/yyyy"}}</td>
+                <td>{{x.gender | lowercase}}</td>
+                <td>{{x.salary | currency:'Rs'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      
+      </div>
+</div>
